@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ServiceRequestsDataEdit">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_weight="0.3"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="Status"
+                        android:textColor="@color/blackColor" />
+
+                    <Spinner
+                        android:id="@+id/spinner_status"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="0.7"
+                        android:background="@drawable/custom_spinner_background"
+                        android:spinnerMode="dropdown" />
+                </LinearLayout>
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.3"
+                        android:text="Attach Files"
+                        android:textColor="@color/blackColor" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/iv_clinic"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="20dp"
+                            android:hint="Image"
+                            android:src="@drawable/image" />
+                        <Button
+                            android:id="@+id/btnBrowse"
+                            android:layout_width="110dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/edit_text"
+                            android:text="Browse"
+                            android:textColor="@color/colorPrimary" />
+                    </LinearLayout>
+                </LinearLayout>
+-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_weight="0.3"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="Description"
+                        android:textColor="@color/blackColor" />
+
+                    <EditText
+                        android:id="@+id/desc_et"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="0.7"
+                        android:background="@color/editTextBack"
+                        android:imeOptions="actionNext"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/blackColor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_weight="0.3"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="Comment"
+                        android:textColor="@color/blackColor" />
+
+                    <EditText
+                        android:id="@+id/comm_et"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="0.7"
+                        android:background="@color/editTextBack"
+                        android:imeOptions="actionNext"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/blackColor" />
+                </LinearLayout>
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_weight="0.3"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="Total"
+                        android:textColor="@color/blackColor" />
+
+                    <EditText
+                        android:id="@+id/total_et"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="0.7"
+                        android:background="@color/editTextBack"
+                        android:imeOptions="actionNext"
+                        android:paddingLeft="10dp"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="@color/blackColor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_weight="0.3"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="Discount"
+                        android:textColor="@color/blackColor" />
+
+                    <EditText
+                        android:id="@+id/disc_et"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="0.7"
+                        android:background="@color/editTextBack"
+                        android:imeOptions="actionNext"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:textColor="@color/blackColor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_weight="0.3"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="Tax"
+                        android:textColor="@color/blackColor" />
+
+                    <EditText
+                        android:id="@+id/tax_et"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="0.7"
+                        android:background="@color/editTextBack"
+                        android:imeOptions="actionNext"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:textColor="@color/blackColor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_weight="0.3"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="Amount Received"
+                        android:textColor="@color/blackColor" />
+
+                    <EditText
+                        android:id="@+id/amnt_et"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="0.7"
+                        android:background="@color/editTextBack"
+                        android:imeOptions="actionNext"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:textColor="@color/blackColor" />
+                </LinearLayout>
+-->
+                <LinearLayout
+                    android:id="@+id/buttonLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/submitSR"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/edit_text"
+                        android:text="Submit"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Button
+                        android:id="@+id/resetSR"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/edit_text"
+                        android:text="Reset"
+                        android:textColor="@color/colorPrimary" />
+                </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
