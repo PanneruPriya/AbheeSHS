@@ -121,7 +121,7 @@ public class ServiceRequestsActivity extends Fragment {
                             hm.put("priority", obj.getString("priority"));
                             hm.put("warranty",obj.getString("warranty"));
                             hm.put("imgfile",obj.getString("imgfile"));
-                           // hm.put("uploadfile",obj.getString("uploadfile"));
+                            hm.put("uploadfile",obj.getString("uploadfile"));
                             hm.put("firstname", obj.getString("firstname"));
                             hm.put("lastname", obj.getString("lastname"));
                             hm.put("mobilenumber", obj.getString("mobilenumber"));
@@ -137,7 +137,7 @@ public class ServiceRequestsActivity extends Fragment {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                chik();
+                //chik();
                 //Toast.makeText(getContext().getApplicationContext(), "Error" + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });

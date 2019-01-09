@@ -390,14 +390,7 @@ public class ServiceRequestsDataEdit1 extends Fragment {
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                descrip.setText("");
                 commen.setText("");
-                tot.setText("");
-                discnt.setText("");
-                tax.setText("");
-                amnt.setText("");
-                //spinner.setAdapter(null);
-                iv_clinic.setImageDrawable(null);
             }
         });
         submit=(Button)v.findViewById(R.id.submitSR);
@@ -414,7 +407,6 @@ public class ServiceRequestsDataEdit1 extends Fragment {
                 if (!isValidComm(comm1)){
                     commen.setError("Add Comment");
                 }
-
                 if (isValidDescrip(disc)&&isValidComm(comm1)){
                     //encodedImage = Base64.encodeToString(img_store, Base64.DEFAULT);
                     Log.e("img", "img" + encodedImage);
@@ -433,7 +425,6 @@ public class ServiceRequestsDataEdit1 extends Fragment {
                 startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
             }
         });
-
     }
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
