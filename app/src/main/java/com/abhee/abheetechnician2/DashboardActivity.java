@@ -18,6 +18,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.abhee.abheetechnician2.service.NotificationService;
+
 public class DashboardActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -32,6 +34,7 @@ public class DashboardActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+        startService(new Intent(getApplicationContext(),NotificationService.class));
         sharedPreferences = this.getSharedPreferences("Abhee", Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
         String fname = sharedPreferences.getString("firstname", "");
@@ -89,6 +92,12 @@ public class DashboardActivity extends AppCompatActivity
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        stopService(new Intent(getApplicationContext(),NotificationService.class));
     }
 
     @Override

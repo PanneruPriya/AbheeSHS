@@ -26,7 +26,10 @@
 
         <activity android:name=".NotificationReceiverActivity"
             android:screenOrientation="portrait"/>
-
+        <service
+            android:name=".service.NotificationService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>
