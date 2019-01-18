@@ -154,7 +154,7 @@ public class ServiceRequestsDataEdit1 extends Fragment {
             spinner = (Spinner) alertLayout.findViewById(R.id.expireyeaer);
             String[] plants = new String[]{
                     ".... Years ....",
-                    "1", "2", "3", "4", "5"
+                    "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"
             };
             final List<String> plantsList = new ArrayList<>(Arrays.asList(plants));
             final ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(
@@ -314,7 +314,7 @@ public class ServiceRequestsDataEdit1 extends Fragment {
         rb2=(RadioButton)v.findViewById(R.id.radiob2);
         spinner2=(Spinner)v.findViewById(R.id.spinner_status);
         String[] plants = new String[]{
-                ".... Select Status ....","Resolved","Payment Pending","Customer not Available"
+                ".... Select Status ....","Resolved","Payment Pending","Customer not Available","Payment Received"
 
         };
         final List<String> plantsList = new ArrayList<>(Arrays.asList(plants));
@@ -359,6 +359,9 @@ public class ServiceRequestsDataEdit1 extends Fragment {
                     }else if (spinner2.getSelectedItemPosition()==3){
                         hold = 8;
                         imagesss.setVisibility(View.VISIBLE);
+                    }else if(spinner2.getSelectedItemPosition()==3){
+                        hold = 10;
+                        imagesss.setVisibility(View.GONE);
                     }
                     //hold = spinner.getSelectedItemPosition();
                 }
