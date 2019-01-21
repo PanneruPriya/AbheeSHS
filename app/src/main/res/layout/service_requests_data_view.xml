@@ -512,11 +512,30 @@
                             tools:ignore="RtlCompat" />
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/invLayout"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:visibility="visible"
+                        android:background="@drawable/cellshape"
+                        android:layout_height="170dp">
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textColor="@color/blackColor"
+                            android:background="@drawable/cellshape"
+                            android:text="Invoice"/>
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/invimg"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:weightSum="2"
-                        android:layout_marginTop="5dp">
+                        android:layout_marginTop="0dp">
                         <LinearLayout
                             android:layout_weight="1"
                             android:layout_width="match_parent"

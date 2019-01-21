@@ -126,6 +126,7 @@ public class ServiceRequestsActivity extends Fragment {
                             hm.put("lastname", obj.getString("lastname"));
                             hm.put("mobilenumber", obj.getString("mobilenumber"));
                             hm.put("taskdeadline", obj.getString("taskdeadline"));
+                            hm.put("invimg",obj.getString("invimg"));
 
                             mCategoryList1.add(hm);
                         }
@@ -198,7 +199,7 @@ public class ServiceRequestsActivity extends Fragment {
                                     hm1.get("uploadfile"),hm1.get("customer_id"),hm1.get("taskno"),
                                     hm1.get("created_time"),hm1.get("warranty"),hm1.get("id"),
                                     hm1.get("category"),hm1.get("assignto"),hm1.get("modelname"),
-                                    hm1.get("taskdeadline"),hm1.get("imgfile"),hm.get("firstname"),hm.get("lastname"),hm.get("mobilenumber")));
+                                    hm1.get("taskdeadline"),hm1.get("imgfile"),hm.get("firstname"),hm.get("lastname"),hm.get("mobilenumber"),hm.get("invimg")));
                     transaction.addToBackStack(null);
                     transaction.commit();
                 }

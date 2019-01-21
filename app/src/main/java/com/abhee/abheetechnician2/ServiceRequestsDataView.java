@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 import com.squareup.picasso.Picasso;
 
@@ -19,12 +20,13 @@ public class ServiceRequestsDataView extends Fragment {
     static String sever,servtype,updtime,sub,desc,
             prior,addinfo,comadd,assgnby,kstatu,
             uplodfile,custId,task,crtdtime,warr,
-            iD,categ,assto,moden,deadline,imgfiles,firstnames, lastnames, mobilenumbers;
+            iD,categ,assto,moden,deadline,imgfiles,firstnames, lastnames, mobilenumbers,invimgs;
     AppCompatTextView text1,text2,text3,text4,text5,
             text6,text7,text8,text9,text10,text11,text12,text13,text14,text15;
-    AppCompatImageView customerupload,adminupload;
+    AppCompatImageView customerupload,adminupload,invoice;
     Button editView;
     int width,heigth;
+    LinearLayout invlayout;
     public ServiceRequestsDataView newInstance(int position, String severity, String serviceType,
                                                String updatedTime, String subject, String description,
                                                String priority, String additionalinfo,
@@ -34,7 +36,7 @@ public class ServiceRequestsDataView extends Fragment {
                                                String createdTime, String warranty,
                                                String id, String category,
                                                String assignto, String modelname, String taskdeadline,String imgfile,
-                                               String firstname,String lastname,String mobilenumber) {
+                                               String firstname,String lastname,String mobilenumber,String invimg) {
         ServiceRequestsDataView fragment = new ServiceRequestsDataView();
         pos=position;
         sever=severity;
@@ -61,6 +63,7 @@ public class ServiceRequestsDataView extends Fragment {
         firstnames =firstname;
         lastnames =lastname;
         mobilenumbers =mobilenumber;
+        invimgs=invimg;
         return fragment;
     }
 
@@ -80,6 +83,7 @@ public class ServiceRequestsDataView extends Fragment {
         Display display = getActivity().getWindowManager().getDefaultDisplay();
         width =display.getWidth();
         heigth=display.getHeight();
+        invlayout=(LinearLayout)v.findViewById(R.id.invLayout);
         text1=(AppCompatTextView)v.findViewById(R.id.textView1);
         text2=(AppCompatTextView)v.findViewById(R.id.textView2);
         text3=(AppCompatTextView)v.findViewById(R.id.textView3);
@@ -97,6 +101,7 @@ public class ServiceRequestsDataView extends Fragment {
         text15=(AppCompatTextView)v.findViewById(R.id.mobilenumber);
         customerupload=(AppCompatImageView)v.findViewById(R.id.uploadfile);
         adminupload=(AppCompatImageView)v.findViewById(R.id.imgfiles);
+        invoice=(AppCompatImageView)v.findViewById(R.id.invimg);
 
         editView=(Button)v.findViewById(R.id.edit_view);
 
@@ -117,6 +122,10 @@ public class ServiceRequestsDataView extends Fragment {
         text15.setText(mobilenumbers);
         Picasso.with(getActivity()).load(Constants.IMG_URL+uplodfile).into(customerupload);
         Picasso.with(getActivity()).load(Constants.IMG_URL+imgfiles).into(adminupload);
+        if(invimgs.length()!=1){
+            invlayout.setVisibility(View.VISIBLE);
+            Picasso.with(getActivity()).load(Constants.IMG_URL+uplodfile).into(invoice);
+        }
         customerupload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
