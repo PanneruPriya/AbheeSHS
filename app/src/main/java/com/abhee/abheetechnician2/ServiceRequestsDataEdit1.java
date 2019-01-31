@@ -225,7 +225,7 @@ public class ServiceRequestsDataEdit1 extends Fragment {
             resetPW1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    purchaseDt.setText("");
+                    //purchaseDt.setText("");
                     expireDt.setText("");
                     spinner.setSelection(0);
                 }

@@ -37,7 +37,7 @@
                             android:ellipsize="end"
                             android:gravity="center"
                             android:textAlignment="textStart"
-                            android:text="Service Request No"
+                            android:text="Service Request Number"
                             android:padding="5dp"
                             android:singleLine="true"
                             tools:ignore="RtlCompat" />
@@ -552,7 +552,7 @@
                                 android:ellipsize="end"
                                 android:textAlignment="center"
                                 android:gravity="center"
-                                android:text="Customer Uploadfile"
+                                android:text="Customer Upload File"
                                 tools:ignore="RtlCompat"
                                 android:padding="2dp"
                                 android:singleLine="true"/>
@@ -584,7 +584,7 @@
                                 android:ellipsize="end"
                                 android:textAlignment="center"
                                 android:gravity="center"
-                                android:text="Admin Uploadfile"
+                                android:text="Admin Upload File"
                                 tools:ignore="RtlCompat"
                                 android:padding="2dp"
                                 android:singleLine="true"/>

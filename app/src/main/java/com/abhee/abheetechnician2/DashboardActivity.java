@@ -79,11 +79,11 @@ public class DashboardActivity extends AppCompatActivity
         }
         int id = item.getItemId();
         if (id == R.id.action_notify) {
-           /* transaction = getSupportFragmentManager().beginTransaction();
+            transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.frame, new NotificationsActivity().newInstance());
             transaction.addToBackStack("tag");
             transaction.addToBackStack(null);
-            transaction.commit();*/
+            transaction.commit();
             return true;
         }
         return super.onOptionsItemSelected(item);

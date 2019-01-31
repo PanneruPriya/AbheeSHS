@@ -4,13 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/bg01">
-    <TextView
+    <ListView
+        android:id="@+id/list_item"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Update Soon"
-        android:textSize="15dip"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimary"
-        android:gravity="center"/>
+        />
 
 </LinearLayout>

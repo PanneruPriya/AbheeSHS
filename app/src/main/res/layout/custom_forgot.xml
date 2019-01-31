@@ -8,7 +8,7 @@
     android:layout_gravity="center">
 
 
-    <LinearLayout
+    <android.support.constraint.ConstraintLayout
         android:id="@+id/customlinear"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -22,18 +22,38 @@
             android:layout_margin="10dp"
             android:text="Enter Mobile Number"
             android:textColor="#FFF"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <android.support.v7.widget.AppCompatImageView
             android:id="@+id/close_dialog1"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="70dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             android:background="@drawable/icons8_cancel_50"
             android:backgroundTint="#FFF" />
 
-    </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
 
 
         <RelativeLayout
