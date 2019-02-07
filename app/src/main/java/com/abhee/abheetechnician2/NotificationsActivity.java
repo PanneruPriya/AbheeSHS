@@ -83,7 +83,7 @@ public class NotificationsActivity extends Fragment {
     private void getDetailsfromserver() {
         RequestQueue queue = Volley.newRequestQueue(getActivity());
         Map<String, String> postParam= new HashMap<String, String>();
-        postParam.put("userId", userid);
+        postParam.put("assignto", userid);
         JsonObjectRequest stringRequest = new JsonObjectRequest(Request.Method.POST,
                 Constants.URL+"getTechnicianNotificationByUserId",
                 new JSONObject(postParam), new Response.Listener<JSONObject>() {
